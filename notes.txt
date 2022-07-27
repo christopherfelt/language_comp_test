@@ -1,0 +1,9 @@
+figure out apis
+- Word Associations API (To collect words)
+- Google Translate (To get the word in other languages)
+- Wiktionary (to get etymology)
+
+Setup:
+- React (or should i try view)
+-- All the boilerplate
+- Amplify
