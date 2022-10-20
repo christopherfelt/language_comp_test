@@ -1,0 +1,1470 @@
+<div class="mw-parser-output">
+  <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button"
+      id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+    <div class="toctitle" lang="en" dir="ltr">
+      <h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel"
+          for="toctogglecheckbox"></label></span>
+    </div>
+
+<!-- grabbing the toc contents I think will help with structuring the JSON -->
+
+<!-- 
+
+main focus will be on grabbing phonetics and etymology
+
+  {
+    meta:{
+      language_count: #
+    },
+    languages:[
+      {
+        name: spanish,
+        etymology: (grab the first or the whole thing?), 
+        pronunciation: (see what we can grab) 
+      },
+      {}
+    ]
+  }
+
+
+
+ -->
+<!-- 
+
+  let html = {
+    meta: number of languages,
+    languages:[
+      {
+        name: language name,
+        nameRef: #language_name,
+        etymologyRefs: #etymology_number -- grabbed the first
+        pronunciation: #Pronunciation_number
+      }
+    ]
+  }
+
+  loop through the unordered list in the toc and get ids
+
+
+  h2 with class mw-headline is the start of the language section
+
+  hr are in between
+
+
+
+
+ -->
+
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Bambara"><span class="tocnumber">1</span> <span
+            class="toctext">Bambara</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-2"><a href="#Etymology"><span class="tocnumber">1.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-3"><a href="#Noun"><span class="tocnumber">1.2</span> <span
+                class="toctext">Noun</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-4"><a href="#Galician"><span class="tocnumber">2</span> <span
+            class="toctext">Galician</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-5"><a href="#Etymology_2"><span class="tocnumber">2.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-6"><a href="#Pronunciation"><span class="tocnumber">2.2</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-7"><a href="#Noun_2"><span class="tocnumber">2.3</span> <span
+                class="toctext">Noun</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-8"><a href="#Derived_terms"><span class="tocnumber">2.3.1</span> <span
+                    class="toctext">Derived terms</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-9"><a href="#Further_reading"><span class="tocnumber">2.4</span> <span
+                class="toctext">Further reading</span></a></li>
+          <li class="toclevel-2 tocsection-10"><a href="#References"><span class="tocnumber">2.5</span> <span
+                class="toctext">References</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-11"><a href="#Hausa"><span class="tocnumber">3</span> <span
+            class="toctext">Hausa</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-12"><a href="#Etymology_3"><span class="tocnumber">3.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-13"><a href="#Pronunciation_2"><span class="tocnumber">3.2</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-14"><a href="#Noun_3"><span class="tocnumber">3.3</span> <span
+                class="toctext">Noun</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-15"><a href="#Ladino"><span class="tocnumber">4</span> <span
+            class="toctext">Ladino</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-16"><a href="#Etymology_4"><span class="tocnumber">4.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-17"><a href="#Noun_4"><span class="tocnumber">4.2</span> <span
+                class="toctext">Noun</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-18"><a href="#Mauritian_Creole"><span class="tocnumber">5</span> <span
+            class="toctext">Mauritian Creole</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-19"><a href="#Etymology_5"><span class="tocnumber">5.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-20"><a href="#Noun_5"><span class="tocnumber">5.2</span> <span
+                class="toctext">Noun</span></a></li>
+          <li class="toclevel-2 tocsection-21"><a href="#References_2"><span class="tocnumber">5.3</span> <span
+                class="toctext">References</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-22"><a href="#Pali"><span class="tocnumber">6</span> <span
+            class="toctext">Pali</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-23"><a href="#Alternative_forms"><span class="tocnumber">6.1</span> <span
+                class="toctext">Alternative forms</span></a></li>
+          <li class="toclevel-2 tocsection-24"><a href="#Adjective"><span class="tocnumber">6.2</span> <span
+                class="toctext">Adjective</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-25"><a href="#Portuguese"><span class="tocnumber">7</span> <span
+            class="toctext">Portuguese</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-26"><a href="#Etymology_6"><span class="tocnumber">7.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-27"><a href="#Pronunciation_3"><span class="tocnumber">7.2</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-28"><a href="#Noun_6"><span class="tocnumber">7.3</span> <span
+                class="toctext">Noun</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-29"><a href="#Related_terms"><span class="tocnumber">7.3.1</span> <span
+                    class="toctext">Related terms</span></a></li>
+              <li class="toclevel-3 tocsection-30"><a href="#Descendants"><span class="tocnumber">7.3.2</span> <span
+                    class="toctext">Descendants</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-31"><a href="#Adjective_2"><span class="tocnumber">7.4</span> <span
+                class="toctext">Adjective</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-32"><a href="#Inflection"><span class="tocnumber">7.4.1</span> <span
+                    class="toctext">Inflection</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-33"><a href="#Further_reading_2"><span class="tocnumber">7.5</span> <span
+                class="toctext">Further reading</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-34"><a href="#Seychellois_Creole"><span class="tocnumber">8</span> <span
+            class="toctext">Seychellois Creole</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-35"><a href="#Etymology_7"><span class="tocnumber">8.1</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-36"><a href="#Noun_7"><span class="tocnumber">8.2</span> <span
+                class="toctext">Noun</span></a></li>
+          <li class="toclevel-2 tocsection-37"><a href="#References_3"><span class="tocnumber">8.3</span> <span
+                class="toctext">References</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-38"><a href="#Spanish"><span class="tocnumber">9</span> <span
+            class="toctext">Spanish</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-39"><a href="#Pronunciation_4"><span class="tocnumber">9.1</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-40"><a href="#Etymology_1"><span class="tocnumber">9.2</span> <span
+                class="toctext">Etymology 1</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-41"><a href="#Noun_8"><span class="tocnumber">9.2.1</span> <span
+                    class="toctext">Noun</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-42"><a href="#Etymology_2_2"><span class="tocnumber">9.3</span> <span
+                class="toctext">Etymology 2</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-43"><a href="#Noun_9"><span class="tocnumber">9.3.1</span> <span
+                    class="toctext">Noun</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-44"><a href="#Etymology_3_2"><span class="tocnumber">9.4</span> <span
+                class="toctext">Etymology 3</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-45"><a href="#Noun_10"><span class="tocnumber">9.4.1</span> <span
+                    class="toctext">Noun</span></a>
+                <ul>
+                  <li class="toclevel-4 tocsection-46"><a href="#Hyponyms"><span class="tocnumber">9.4.1.1</span> <span
+                        class="toctext">Hyponyms</span></a></li>
+                  <li class="toclevel-4 tocsection-47"><a href="#Derived_terms_2"><span class="tocnumber">9.4.1.2</span>
+                      <span class="toctext">Derived terms</span></a></li>
+                  <li class="toclevel-4 tocsection-48"><a href="#Related_terms_2"><span class="tocnumber">9.4.1.3</span>
+                      <span class="toctext">Related terms</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-49"><a href="#Further_reading_3"><span class="tocnumber">9.5</span> <span
+                class="toctext">Further reading</span></a></li>
+          <li class="toclevel-2 tocsection-50"><a href="#Anagrams"><span class="tocnumber">9.6</span> <span
+                class="toctext">Anagrams</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-51"><a href="#Venetian"><span class="tocnumber">10</span> <span
+            class="toctext">Venetian</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-52"><a href="#Alternative_forms_2"><span class="tocnumber">10.1</span> <span
+                class="toctext">Alternative forms</span></a></li>
+          <li class="toclevel-2 tocsection-53"><a href="#Etymology_8"><span class="tocnumber">10.2</span> <span
+                class="toctext">Etymology</span></a></li>
+          <li class="toclevel-2 tocsection-54"><a href="#Pronunciation_5"><span class="tocnumber">10.3</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-55"><a href="#Noun_11"><span class="tocnumber">10.4</span> <span
+                class="toctext">Noun</span></a></li>
+        </ul>
+      </li>
+      <li class="toclevel-1 tocsection-56"><a href="#Welsh"><span class="tocnumber">11</span> <span
+            class="toctext">Welsh</span></a>
+        <ul>
+          <li class="toclevel-2 tocsection-57"><a href="#Pronunciation_6"><span class="tocnumber">11.1</span> <span
+                class="toctext">Pronunciation</span></a></li>
+          <li class="toclevel-2 tocsection-58"><a href="#Etymology_1_2"><span class="tocnumber">11.2</span> <span
+                class="toctext">Etymology 1</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-59"><a href="#Alternative_forms_3"><span class="tocnumber">11.2.1</span>
+                  <span class="toctext">Alternative forms</span></a></li>
+              <li class="toclevel-3 tocsection-60"><a href="#Verb"><span class="tocnumber">11.2.2</span> <span
+                    class="toctext">Verb</span></a></li>
+              <li class="toclevel-3 tocsection-61"><a href="#Mutation"><span class="tocnumber">11.2.3</span> <span
+                    class="toctext">Mutation</span></a></li>
+            </ul>
+          </li>
+          <li class="toclevel-2 tocsection-62"><a href="#Etymology_2_3"><span class="tocnumber">11.3</span> <span
+                class="toctext">Etymology 2</span></a>
+            <ul>
+              <li class="toclevel-3 tocsection-63"><a href="#Verb_2"><span class="tocnumber">11.3.1</span> <span
+                    class="toctext">Verb</span></a></li>
+              <li class="toclevel-3 tocsection-64"><a href="#Mutation_2"><span class="tocnumber">11.3.2</span> <span
+                    class="toctext">Mutation</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><span class="mw-headline" id="Bambara">Bambara</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=1"
+        title="Edit section: Bambara">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=2"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language" class="extiw"
+        title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a href="/wiki/g%C3%A2teau#French"
+        title="gâteau">gâteau</a></i>.
+  </p>
+  <h3><span class="mw-headline" id="Noun">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=3"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="bm">gato</strong>
+  </p>
+  <ol>
+    <li><a href="/wiki/cake" title="cake">cake</a></li>
+  </ol>
+  <hr />
+  <h2><span class="mw-headline" id="Galician">Galician</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=4"
+        title="Edit section: Galician">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology_2">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=5"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From Old Galician and <span class="etyl"><a href="https://en.wikipedia.org/wiki/Galician-Portuguese" class="extiw"
+        title="w:Galician-Portuguese">Old Portuguese</a></span> <i class="Latn mention" lang="roa-opt"><a
+        href="/wiki/gato#Old_Portuguese" title="gato">gato</a></i>, from <span class="etyl"><a
+        href="https://en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late Latin</a></span> <i
+      class="Latn mention" lang="la"><a href="/wiki/cattus#Latin" title="cattus">cattus</a></i>. See <i
+      class="Latn mention" lang="en"><a href="/wiki/cat#English" title="cat">cat</a></i> for more.
+  </p>
+  <h3><span class="mw-headline" id="Pronunciation">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=6"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><span class="ib-brac qualifier-brac">(</span><span class="ib-content qualifier-content">standard</span><span
+        class="ib-brac qualifier-brac">)</span> <a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+          href="https://en.wikipedia.org/wiki/Galician_phonology" class="extiw"
+          title="wikipedia:Galician phonology">key</a>)</sup>:&#32;<span class="IPA">[ˈɡatʊ]</span></li>
+    <li><span class="ib-brac qualifier-brac">(</span><span class="ib-content qualifier-content">dialectal</span><span
+        class="ib-brac qualifier-brac">)</span> <a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+          href="https://en.wikipedia.org/wiki/Galician_phonology" class="extiw"
+          title="wikipedia:Galician phonology">key</a>)</sup>:&#32;<span class="IPA">[ˈħatʊ]</span></li>
+  </ul>
+  <div class="noprint request-box"
+    style="width: auto; margin: 0; padding: 0.5em; border-collapse: collapse;overflow: hidden;">
+    <table style="background:#FFFFFF; width:90%; margin: auto; border:1px dashed #999999; text-align:left">
+      <tbody>
+        <tr>
+          <td><a href="/wiki/File:Headset_icon.svg" class="image"><img alt="Headset icon.svg"
+                src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Headset_icon.svg/20px-Headset_icon.svg.png"
+                decoding="async" width="20" height="23"
+                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Headset_icon.svg/30px-Headset_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Headset_icon.svg/40px-Headset_icon.svg.png 2x"
+                data-file-width="119" data-file-height="136" /></a>
+          </td>
+          <td>This entry needs <a href="/wiki/Category:Requests_for_audio_pronunciation_in_Galician_entries"
+              title="Category:Requests for audio pronunciation in Galician entries">audio files</a>. If you are a native
+            speaker with a microphone, please <a href="/wiki/Help:Audio_pronunciations"
+              title="Help:Audio pronunciations">record some</a> and <a
+              href="https://commons.wikimedia.org/wiki/Special:Upload" class="extiw"
+              title="commons:Special:Upload">upload</a> them. <small>(For audio required quickly, visit <a
+                href="/wiki/Wiktionary:APR" class="mw-redirect" title="Wiktionary:APR">WT:APR</a>.)</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3><span class="mw-headline" id="Noun_2">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=7"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="gl">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>plural</i> <b class="Latn form-of lang-gl p-form-of" lang="gl"><a
+        href="/wiki/gatos#Galician" title="gatos">gatos</a></b>, <i>feminine</i> <b class="Latn" lang="gl"><a
+        href="/wiki/gata#Galician" title="gata">gata</a></b>, <i>feminine plural</i> <b class="Latn" lang="gl"><a
+        href="/wiki/gatas#Galician" title="gatas">gatas</a></b>)
+  </p>
+  <ol>
+    <li><a href="/wiki/cat" title="cat">cat</a>
+      <ul>
+        <li><b>c1295</b>, R. Lorenzo (ed.), <i>La traducción gallega de la Crónica General y de la Crónica de
+            Castilla</i>. Ourense: I.E.O.P.F., page 528:
+          <dl>
+            <dd><i>Et auia muy grã mortaydade ẽnos poboos da vila con fome, et con coyta comiã os <b>gatos</b> et os
+                caes et os mures</i>
+              <dl>
+                <dd>And they had a big mortality among the people of the town with hunger, and with grief they ate the
+                  <b>cats</b> and the dogs and the mice</dd>
+              </dl>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h4><span class="mw-headline" id="Derived_terms">Derived terms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=8"
+        title="Edit section: Derived terms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <ul>
+    <li><span class="Latn" lang="gl"><a href="/wiki/Gato#Galician" title="Gato">Gato</a></span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=9"
+        title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>“<a rel="nofollow" class="external text" href="http://academia.gal/dicionario/-/termo/busca/gato">gato</a>” in
+      <i>Dicionario da Real Academia Galega</i>, <a href="https://en.wikipedia.org/wiki/Royal_Galician_Academy"
+        class="extiw" title="w:Royal Galician Academy">Royal Galician Academy</a>.</li>
+  </ul>
+  <h3><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=10"
+        title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>“<a rel="nofollow" class="external text"
+        href="https://ilg.usc.gal/ddgm/ddd_pescuda.php?pescuda=gato&amp;tipo_busca=lema">gato</a>” in <i>Dicionario de
+        Dicionarios do galego medieval</i>, SLI - ILGA 2006–2022.</li>
+    <li>“<a rel="nofollow" class="external text"
+        href="https://ilg.usc.gal/xelmirez/xelmirez.php?pescuda=gato&amp;&amp;corpus=xelmirez">gato</a>” in Xavier
+      Varela Barreiro &amp; Xavier Gómez Guinovart: <i>Corpus Xelmírez - Corpus lingüístico da Galicia medieval</i>. SLI
+      / Grupo TALG / ILG, 2006–2018.</li>
+    <li>“<a rel="nofollow" class="external text"
+        href="https://ilg.usc.gal/ddd/ddd_pescuda.php?lang=en&amp;pescuda=gato&amp;tipo_busca=lema&amp;acentos=n">gato</a>”
+      in <i>Dicionario de Dicionarios da lingua galega</i>, SLI - ILGA 2006–2013.</li>
+    <li>“<a rel="nofollow" class="external text" href="http://ilg.usc.es/TILG/en/search/simple">gato</a>” in <i>Tesouro
+        informatizado da lingua galega</i>. Santiago: ILG.</li>
+    <li>“<a rel="nofollow" class="external text"
+        href="http://ilg.usc.es/Tesouro/en/search#search=normal&amp;mode=lema&amp;q=gato">gato</a>” in Álvarez, Rosario
+      (coord.): <i><a rel="nofollow" class="external text" href="http://ilg.usc.es/Tesouro">Tesouro do léxico
+          patrimonial galego e portugués</a></i>, Santiago de Compostela: Instituto da Lingua Galega.</li>
+  </ul>
+  <hr />
+  <h2><span class="mw-headline" id="Hausa">Hausa</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=11"
+        title="Edit section: Hausa">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology_3">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=12"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language" class="extiw"
+        title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a href="/wiki/gateau#French"
+        title="gateau">gateau</a></i>.
+  </p>
+  <h3><span class="mw-headline" id="Pronunciation_2">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=13"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+          href="https://en.wikipedia.org/wiki/Hausa_phonology" class="extiw"
+          title="wikipedia:Hausa phonology">key</a>)</sup>:&#32;<span class="IPA">/ɡàː.tôː/</span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Noun_3">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=14"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="ha">gā̀tô</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>possessed form</i> <b class="Latn" lang="ha"><a
+        href="/w/index.php?title=gaton&amp;action=edit&amp;redlink=1" class="new"
+        title="gaton (page does not exist)">gā̀tôn</a></b>)
+  </p>
+  <ol>
+    <li><span class="ib-brac">(</span><span class="ib-content">Niger</span><span class="ib-brac">)</span> <a
+        href="/wiki/cake" title="cake">cake</a>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonym:</span> <span
+              class="ib-brac qualifier-brac">(</span><span class="ib-content qualifier-content">Nigeria</span><span
+              class="ib-brac qualifier-brac">)</span> <span class="Latn" lang="ha"><a href="/wiki/kyat#Hausa"
+                title="kyat">kyât</a></span></span></dd>
+      </dl>
+    </li>
+  </ol>
+  <hr />
+  <h2><span class="mw-headline" id="Ladino">Ladino</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=15"
+        title="Edit section: Ladino">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology_4">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=16"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late
+        Latin</a></span> <i class="Latn mention" lang="la"><a href="/wiki/cattus#Latin" title="cattus">cattus</a></i>.
+    See <i class="Latn mention" lang="en"><a href="/wiki/cat#English" title="cat">cat</a></i> for more.
+  </p>
+  <h3><span class="mw-headline" id="Noun_4">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=17"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="lad">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i><a href="/wiki/Appendix:Roman_script" class="mw-redirect"
+        title="Appendix:Roman script">Latin spelling</a></i>, <i>plural</i> <b class="Latn form-of lang-lad p-form-of"
+      lang="lad"><a href="/wiki/gatos#Ladino" title="gatos">gatos</a></b>)
+  </p>
+  <ol>
+    <li><a href="/wiki/cat" title="cat">cat</a></li>
+  </ol>
+  <hr />
+  <h2><span class="mw-headline" id="Mauritian_Creole">Mauritian Creole</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=18"
+        title="Edit section: Mauritian Creole">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology_5">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=19"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language" class="extiw"
+        title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a href="/wiki/g%C3%A2teau#French"
+        title="gâteau">gâteau</a></i>.
+  </p>
+  <h3><span class="mw-headline" id="Noun_5">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=20"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="mfe">gato</strong>
+  </p>
+  <ol>
+    <li><a href="/wiki/cake" title="cake">cake</a></li>
+  </ol>
+  <h3><span class="mw-headline" id="References_2">References</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=21"
+        title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>Baker, Philip &amp; Hookoomsing, Vinesh Y. 1987. <i>Dictionnaire de créole mauricien. Morisyen – English –
+        Français</i></li>
+  </ul>
+  <hr />
+  <h2><span class="mw-headline" id="Pali">Pali</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=22"
+        title="Edit section: Pali">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Alternative_forms">Alternative forms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=23"
+        title="Edit section: Alternative forms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <div class="NavFrame" style="max-width:40em">
+    <div class="NavHead" style="background:#d9ebff">Alternative forms</div>
+    <div class="NavContent" style="text-align:left">
+      <ul>
+        <li><span class="Brah" lang="pi"><a
+              href="/w/index.php?title=%F0%91%80%95%F0%91%80%A2%F0%91%81%84&amp;action=edit&amp;redlink=1" class="new"
+              title="𑀕𑀢𑁄 (page does not exist)">𑀕𑀢𑁄</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Brahmi script</span><span class="ib-brac">)</span></li>
+        <li><span class="Deva" lang="pi"><a href="/wiki/%E0%A4%97%E0%A4%A4%E0%A5%8B#Pali" title="गतो">गतो</a></span>
+          <span class="ib-brac">(</span><span class="ib-content">Devanagari script</span><span class="ib-brac">)</span>
+        </li>
+        <li><span class="Beng" lang="pi"><a
+              href="/w/index.php?title=%E0%A6%97%E0%A6%A4%E0%A7%8B&amp;action=edit&amp;redlink=1" class="new"
+              title="গতো (page does not exist)">গতো</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Bengali script</span><span class="ib-brac">)</span></li>
+        <li><span class="Sinh" lang="pi"><a
+              href="/w/index.php?title=%E0%B6%9C%E0%B6%AD%E0%B7%9C&amp;action=edit&amp;redlink=1" class="new"
+              title="ගතො (page does not exist)">ගතො</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Sinhalese script</span><span class="ib-brac">)</span></li>
+        <li><span class="Mymr" lang="pi"><a
+              href="/w/index.php?title=%E1%80%82%E1%80%90%E1%80%B1%E1%80%AC&amp;action=edit&amp;redlink=1" class="new"
+              title="ဂတော (page does not exist)">ဂတော</a></span> or <span class="Mymr" lang="pi"><a
+              href="/w/index.php?title=%E1%81%B7%E1%80%90%E1%80%B1%E1%82%83&amp;action=edit&amp;redlink=1" class="new"
+              title="ၷတေႃ (page does not exist)">ၷတေႃ</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Burmese script</span><span class="ib-brac">)</span></li>
+        <li><span class="Thai" lang="pi"><a
+              href="/w/index.php?title=%E0%B8%84%E0%B9%82%E0%B8%95&amp;action=edit&amp;redlink=1" class="new"
+              title="คโต (page does not exist)">คโต</a></span> or <span class="Thai" lang="pi"><a
+              href="/w/index.php?title=%E0%B8%84%E0%B8%B0%E0%B9%82%E0%B8%95&amp;action=edit&amp;redlink=1" class="new"
+              title="คะโต (page does not exist)">คะโต</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Thai script</span><span class="ib-brac">)</span></li>
+        <li><span class="Lana" lang="pi"><a
+              href="/w/index.php?title=%E1%A8%A3%E1%A8%B2%E1%A9%AE%E1%A9%A3&amp;action=edit&amp;redlink=1" class="new"
+              title="ᨣᨲᩮᩣ (page does not exist)">ᨣᨲᩮᩣ</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Tai Tham script</span><span class="ib-brac">)</span></li>
+        <li><span class="Laoo" lang="pi"><a
+              href="/w/index.php?title=%E0%BA%84%E0%BB%82%E0%BA%95&amp;action=edit&amp;redlink=1" class="new"
+              title="ຄໂຕ (page does not exist)">ຄໂຕ</a></span> or <span class="Laoo" lang="pi"><a
+              href="/w/index.php?title=%E0%BA%84%E0%BA%B0%E0%BB%82%E0%BA%95&amp;action=edit&amp;redlink=1" class="new"
+              title="ຄະໂຕ (page does not exist)">ຄະໂຕ</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Lao script</span><span class="ib-brac">)</span></li>
+        <li><span class="Khmr" lang="pi"><a
+              href="/w/index.php?title=%E1%9E%82%E1%9E%8F%E1%9F%84&amp;action=edit&amp;redlink=1" class="new"
+              title="គតោ (page does not exist)">គតោ</a></span> <span class="ib-brac">(</span><span
+            class="ib-content">Khmer script</span><span class="ib-brac">)</span></li>
+      </ul>
+    </div>
+  </div>
+  <h3><span class="mw-headline" id="Adjective">Adjective</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=24"
+        title="Edit section: Adjective">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="pi">gato</strong>
+  </p>
+  <ol>
+    <li><span class="form-of-definition use-with-mention"><a href="/wiki/Appendix:Glossary#nominative_case"
+          title="Appendix:Glossary">nominative</a> <a href="/wiki/Appendix:Glossary#singular_number"
+          title="Appendix:Glossary">singular</a> <a href="/wiki/Appendix:Glossary#gender"
+          title="Appendix:Glossary">masculine</a> of <span class="form-of-definition-link"><i class="Latn mention"
+            lang="pi"><a href="/wiki/gata#Pali" title="gata">gata</a></i></span></span>, <i>which is</i> <span
+        class="form-of-definition use-with-mention"><a href="/wiki/Appendix:Glossary#past_tense"
+          title="Appendix:Glossary">past</a> <a href="/wiki/Appendix:Glossary#participle"
+          title="Appendix:Glossary">participle</a> of <span class="form-of-definition-link"><i class="Latn mention"
+            lang="pi"><a href="/wiki/gacchati#Pali" title="gacchati">gacchati</a></i> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">to go</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></span></span></li>
+  </ol>
+  <hr />
+  <h2><span class="mw-headline" id="Portuguese">Portuguese</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=25"
+        title="Edit section: Portuguese">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <div class="thumb tright">
+    <div class="thumbinner" style="width:225px;"><a href="/wiki/File:Niobe050905-Siamese_Cat.jpeg" class="image"><img
+          alt=""
+          src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/223px-Niobe050905-Siamese_Cat.jpeg"
+          decoding="async" width="223" height="300" class="thumbimage"
+          srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/335px-Niobe050905-Siamese_Cat.jpeg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/447px-Niobe050905-Siamese_Cat.jpeg 2x"
+          data-file-width="1392" data-file-height="1870" /></a>
+      <div class="thumbcaption">
+        <div class="magnify"><a href="/wiki/File:Niobe050905-Siamese_Cat.jpeg" class="internal" title="Enlarge"></a>
+        </div><b><a href="/wiki/gato_siam%C3%AAs" title="gato siamês">gato siamês</a></b>
+      </div>
+    </div>
+  </div>
+  <h3><span class="mw-headline" id="Etymology_6">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=26"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/Galician-Portuguese" class="extiw"
+        title="w:Galician-Portuguese">Old Portuguese</a></span> <i class="Latn mention" lang="roa-opt"><a
+        href="/wiki/gato#Old_Portuguese" title="gato">gato</a></i>, from <span class="etyl"><a
+        href="https://en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late Latin</a></span> <i
+      class="Latn mention" lang="la"><a href="/wiki/cattus#Latin" title="cattus">cattus</a></i>; compare also <i
+      class="Latn mention" lang="la">catta</i>, possibly of ultimately <span class="etyl"><a
+        href="https://en.wikipedia.org/wiki/Afroasiatic_languages" class="extiw"
+        title="w:Afroasiatic languages">Afroasiatic</a></span> origin. See the etymology at <i class="Latn mention"
+      lang="en"><a href="/wiki/cat#English" title="cat">cat</a></i> for further details.
+  </p>
+  <h3><span class="mw-headline" id="Pronunciation_3">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=27"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <div>
+    <ul>
+      <li><a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+          title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+            href="/wiki/Appendix:Portuguese_pronunciation"
+            title="Appendix:Portuguese pronunciation">key</a>)</sup>:&#32;<span class="IPA">/ˈɡa.tu/</span>, <span
+          class="IPA">[ˈɡa.tu]</span></li>
+    </ul>
+  </div>
+  <p><span></span>
+  </p>
+  <ul>
+    <li><span class="ib-brac qualifier-brac">(</span><span class="ib-content qualifier-content"><a
+          href="https://en.wikipedia.org/wiki/Brazilian_Portuguese" class="extiw" title="w:Brazilian Portuguese">South
+          Brazil</a></span><span class="ib-brac qualifier-brac">)</span> <a
+        href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+          href="/wiki/Appendix:Portuguese_pronunciation"
+          title="Appendix:Portuguese pronunciation">key</a>)</sup>:&#32;<span class="IPA">/ˈɡa.to/</span></li>
+    <li>Rhymes: <a href="/wiki/Rhymes:Portuguese/atu" title="Rhymes:Portuguese/atu"><span class="IPA">-atu</span></a>
+    </li>
+    <li>Hyphenation: <span class="Latn" lang="pt">ga‧to</span></li>
+    <li>
+      <style data-mw-deduplicate="TemplateStyles:r50165410">
+        .mw-parser-output .k-player .k-attribution {
+          visibility: hidden
+        }
+      </style>
+      <table class="audiotable"
+        style="vertical-align: middle; display:inline-block; list-style:none;line-height: 1em; border-collapse:collapse;">
+        <tbody>
+          <tr>
+            <td class="unicode audiolink" style="padding-right:5px; padding-left: 0;">Audio (Brazil)</td>
+            <td class="audiofile"><audio id="mwe_player_0" controls="" preload="none" width="175" style="width:175px;"
+                data-durationhint="2" data-mwtitle="LL-Q5146_(por)-MedK1-gato.wav" data-mwprovider="wikimediacommons">
+                <source src="//upload.wikimedia.org/wikipedia/commons/c/c7/LL-Q5146_%28por%29-MedK1-gato.wav"
+                  type="audio/wav" data-title="Original WAV file (706 kbps)" data-shorttitle="WAV source" data-width="0"
+                  data-height="0" data-bandwidth="705600" /></audio></td>
+            <td class="audiometa" style="font-size: 80%;">(<a href="/wiki/File:LL-Q5146_(por)-MedK1-gato.wav"
+                title="File:LL-Q5146 (por)-MedK1-gato.wav">file</a>)</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+  <h3><span class="mw-headline" id="Noun_6">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=28"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="pt">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>plural</i> <b class="Latn form-of lang-pt p-form-of" lang="pt"><a
+        href="/wiki/gatos#Portuguese" title="gatos">gatos</a></b>, <i>feminine</i> <b
+      class="Latn form-of lang-pt f-form-of" lang="pt"><a href="/wiki/gata#Portuguese" title="gata">gata</a></b>,
+    <i>feminine plural</i> <b class="Latn form-of lang-pt p-form-of origin-gata" lang="pt"><a
+        href="/wiki/gatas#Portuguese" title="gatas">gatas</a></b>)
+  </p>
+  <ol>
+    <li><a href="/wiki/cat" title="cat">cat</a> (<a href="/wiki/domestic_cat" title="domestic cat">domestic cat</a>: <a
+        href="/wiki/Felis_silvestris_catus" title="Felis silvestris catus">Felis silvestris catus</a>)
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonyms:</span> <span class="Latn" lang="pt"><strong
+                class="selflink">gato</strong> <a href="/wiki/dom%C3%A9stico#Portuguese"
+                title="doméstico">doméstico</a></span>, <span class="Latn" lang="pt"><strong
+                class="selflink">gato</strong> <a href="/wiki/caseiro#Portuguese"
+                title="caseiro">caseiro</a></span></span></dd>
+      </dl>
+      <ul>
+        <li><b>2000</b>, <a href="https://en.wikipedia.org/wiki/J._K._Rowling" class="extiw"
+            title="wikipedia:J. K. Rowling">J. K. Rowling</a>, <a href="https://en.wikipedia.org/wiki/Lia_Wyler"
+            class="extiw" title="wikipedia:Lia Wyler">Lia Wyler</a>, <i>Harry Potter e o Prisioneiro de Azkaban</i>,
+          Rocco, page 55:
+          <dl>
+            <dd>
+              <div class="h-quotation"><span class="Latn e-quotation" lang="pt">[...] o <b>gato</b> ronronava feliz nos
+                  braços de Hermione.</span>
+                <dl>
+                  <dd><span class="e-translation">[...] the cat was purring happily on Hermione's arms.</span></dd>
+                </dl>
+              </div>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </li>
+    <li><a href="/wiki/feline" title="feline">feline</a>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonym:</span> <span class="Latn" lang="pt"><a
+                href="/wiki/felino#Portuguese" title="felino">felino</a></span></span></dd>
+      </dl>
+    </li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#slang"
+          title="Appendix:Glossary">slang</a></span><span class="ib-brac">)</span> very handsome man
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonym:</span> <span class="Latn" lang="pt"><a
+                href="/wiki/p%C3%A3o#Portuguese" title="pão">pão</a></span></span></dd>
+      </dl>
+    </li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="https://en.wikipedia.org/wiki/Brazil"
+          class="extiw" title="w:Brazil">Brazil</a><span class="ib-comma">,</span>&#32;<a
+          href="/wiki/Appendix:Glossary#slang" title="Appendix:Glossary">slang</a></span><span class="ib-brac">)</span>
+      an <a href="/wiki/illegal" title="illegal">illegal</a> connection to use electricity or watch <a
+        href="/wiki/pay_TV" title="pay TV">pay TV</a> for free</li>
+  </ol>
+  <h4><span class="mw-headline" id="Related_terms">Related terms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=29"
+        title="Edit section: Related terms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <ul>
+    <li><span class="Latn" lang="pt"><a href="/wiki/gata#Portuguese" title="gata">gata</a></span></li>
+    <li><span class="Latn" lang="pt"><a href="/wiki/gat%C3%A3o#Portuguese" title="gatão">gatão</a></span> <span
+        class="mention-gloss-paren annotation-paren">(</span><span class="ann-pos">augmentative</span><span
+        class="mention-gloss-paren annotation-paren">)</span></li>
+    <li><span class="Latn" lang="pt"><a href="/wiki/gatinho#Portuguese" title="gatinho">gatinho</a></span> <span
+        class="mention-gloss-paren annotation-paren">(</span><span class="ann-pos">diminutive</span><span
+        class="mention-gloss-paren annotation-paren">)</span></li>
+  </ul>
+  <h4><span class="mw-headline" id="Descendants">Descendants</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=30"
+        title="Edit section: Descendants">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <ul>
+    <li>Annobonese: <span class="Latn" lang="fab"><a href="/wiki/gatu#Annobonese" title="gatu">gatu</a></span>
+      <style data-mw-deduplicate="TemplateStyles:r68481116">
+        .mw-parser-output .desc-arr[title] {
+          cursor: help
+        }
+
+        .mw-parser-output .desc-arr[title="uncertain"] {
+          font-size: .7em;
+          vertical-align: super
+        }
+      </style>
+    </li>
+    <li>Kabuverdianu: <span class="Latn" lang="kea"><a href="/wiki/g%C3%A1tu#Kabuverdianu" title="gátu">gátu</a></span>
+      <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r68481116" />
+    </li>
+    <li><span class="desc-arr" title="borrowed">→</span><span class="desc-arr" title="uncertain">?</span> Gulf Arabic:
+      <span class="Arab" lang="afb"><a href="/wiki/%D9%82%D8%B7%D9%88#Gulf_Arabic" title="قطو">قطو</a></span>&#8206;
+      <span class="mention-gloss-paren annotation-paren">(</span><span lang="afb-Latn" class="tr Latn">gaṭu</span><span
+        class="mention-gloss-paren annotation-paren">)</span>
+      <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r68481116" />
+    </li>
+  </ul>
+  <h3><span class="mw-headline" id="Adjective_2">Adjective</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=31"
+        title="Edit section: Adjective">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="pt">gato</strong> (<i>feminine</i> <b
+      class="Latn form-of lang-pt f&#124;s-form-of" lang="pt"><a href="/wiki/gata#Portuguese" title="gata">gata</a></b>,
+    <i>masculine plural</i> <b class="Latn form-of lang-pt m&#124;p-form-of" lang="pt"><a href="/wiki/gatos#Portuguese"
+        title="gatos">gatos</a></b>, <i>feminine plural</i> <b class="Latn form-of lang-pt f&#124;p-form-of"
+      lang="pt"><a href="/wiki/gatas#Portuguese" title="gatas">gatas</a></b>)
+  </p>
+  <ol>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#informal"
+          title="Appendix:Glossary">informal</a><span class="ib-comma">,</span>&#32;of a person</span><span
+        class="ib-brac">)</span> physically attractive</li>
+  </ol>
+  <h4><span class="mw-headline" id="Inflection">Inflection</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=32"
+        title="Edit section: Inflection">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <div class="NavFrame" style="clear:both; white-space: nowrap; max-width: 50em">
+    <div class="NavHead">Inflection of <i class="Latn mention" lang="pt">gato</i></div>
+    <div class="NavContent">
+      <table style="border: 1px solid #999999; width: 100%; background:#F6F6F6;" cellpadding="3" cellspacing="0"
+        class="inflection-table">
+
+        <tbody>
+          <tr>
+            <th style="border: 1px solid #999999; background:#B0B0B0" rowspan="2">
+            </th>
+            <th style="border: 1px solid #999999; background:#D0D0D0" colspan="2">singular
+            </th>
+            <th style="border: 1px solid #999999; background:#D0D0D0" colspan="2">plural
+            </th>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#D0D0D0; width:21%">masculine
+            </th>
+            <th style="border: 1px solid #999999; background:#D0D0D0; width:21%">feminine
+            </th>
+            <th style="border: 1px solid #999999; background:#D0D0D0; width:21%">masculine
+            </th>
+            <th style="border: 1px solid #999999; background:#D0D0D0; width:21%">feminine
+            </th>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#b0bfd4"><a href="/wiki/Appendix:Glossary#positive"
+                title="Appendix:Glossary">positive</a>
+            </th>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><strong
+                  class="selflink">gato</strong></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gata#Portuguese" title="gata">gata</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatos#Portuguese" title="gatos">gatos</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatas#Portuguese" title="gatas">gatas</a></span>
+            </td>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#b0bfd4"><a href="/wiki/Appendix:Glossary#comparative"
+                title="Appendix:Glossary">comparative</a>
+            </th>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/mais#Portuguese" title="mais">mais</a> gato</span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/mais#Portuguese" title="mais">mais</a> gata</span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/mais#Portuguese" title="mais">mais</a> gatos</span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/mais#Portuguese" title="mais">mais</a> gatas</span>
+            </td>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#b0bfd4"><a href="/wiki/Appendix:Glossary#superlative"
+                title="Appendix:Glossary">superlative</a>
+            </th>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/o#Portuguese" title="o">o</a> <a href="/wiki/mais#Portuguese" title="mais">mais</a>
+                gato</span><br /><span class="Latn" lang="pt"><a
+                  href="/w/index.php?title=gat%C3%ADssimo&amp;action=edit&amp;redlink=1" class="new"
+                  title="gatíssimo (page does not exist)">gatíssimo</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/a#Portuguese" title="a">a</a> <a href="/wiki/mais#Portuguese" title="mais">mais</a>
+                gata</span><br /><span class="Latn" lang="pt"><a
+                  href="/w/index.php?title=gat%C3%ADssima&amp;action=edit&amp;redlink=1" class="new"
+                  title="gatíssima (page does not exist)">gatíssima</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/os#Portuguese" title="os">os</a> <a href="/wiki/mais#Portuguese" title="mais">mais</a>
+                gatos</span><br /><span class="Latn" lang="pt"><a
+                  href="/w/index.php?title=gat%C3%ADssimos&amp;action=edit&amp;redlink=1" class="new"
+                  title="gatíssimos (page does not exist)">gatíssimos</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/as#Portuguese" title="as">as</a> <a href="/wiki/mais#Portuguese" title="mais">mais</a>
+                gatas</span><br /><span class="Latn" lang="pt"><a
+                  href="/w/index.php?title=gat%C3%ADssimas&amp;action=edit&amp;redlink=1" class="new"
+                  title="gatíssimas (page does not exist)">gatíssimas</a></span>
+            </td>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#b0bfd4"><a href="/wiki/Appendix:Glossary#augmentative"
+                title="Appendix:Glossary">augmentative</a>
+            </th>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gat%C3%A3o#Portuguese" title="gatão">gatão</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatona#Portuguese" title="gatona">gatona</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gat%C3%B5es#Portuguese" title="gatões">gatões</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatonas#Portuguese" title="gatonas">gatonas</a></span>
+            </td>
+          </tr>
+          <tr>
+            <th style="border: 1px solid #999999; background:#b0bfd4"><a href="/wiki/Appendix:Glossary#diminutive"
+                title="Appendix:Glossary">diminutive</a>
+            </th>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatinho#Portuguese" title="gatinho">gatinho</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatinha#Portuguese" title="gatinha">gatinha</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatinhos#Portuguese" title="gatinhos">gatinhos</a></span>
+            </td>
+            <td style="border: 1px solid #999999;" valign="top"><span class="Latn" lang="pt"><a
+                  href="/wiki/gatinhas#Portuguese" title="gatinhas">gatinhas</a></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3><span class="mw-headline" id="Further_reading_2">Further reading</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=33"
+        title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>“<a rel="nofollow" class="external text" href="http://www.dicionario-aberto.net/search/gato">gato</a>” in
+      <i>Dicionário Aberto</i> based on <i>Novo Diccionário da Língua Portuguesa de Cândido de Figueiredo</i>, 1913</li>
+  </ul>
+  <hr />
+  <h2><span class="mw-headline" id="Seychellois_Creole">Seychellois Creole</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=34"
+        title="Edit section: Seychellois Creole">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Etymology_7">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=35"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language" class="extiw"
+        title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a href="/wiki/g%C3%A2teau#French"
+        title="gâteau">gâteau</a></i>.
+  </p>
+  <h3><span class="mw-headline" id="Noun_7">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=36"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="crs">gato</strong>
+  </p>
+  <ol>
+    <li><a href="/wiki/cake" title="cake">cake</a></li>
+  </ol>
+  <h3><span class="mw-headline" id="References_3">References</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=37"
+        title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>Danielle D’Offay et Guy Lionnet, <i>Diksyonner Kreol - Franse / Dictionnaire Créole Seychellois - Français</i>
+    </li>
+  </ul>
+  <hr />
+  <h2><span class="mw-headline" id="Spanish">Spanish</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=38"
+        title="Edit section: Spanish">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <div class="sister-wikipedia sister-project noprint floatright"
+    style="border: 1px solid #aaa; font-size: 90%; background: #f9f9f9; width: 250px; padding: 4px; text-align: left;">
+    <div style="float: left;">
+      <div class="floatnone"><img alt=""
+          src="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/44px-Wikipedia-logo-v2.svg.png"
+          decoding="async" width="44" height="40"
+          srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/66px-Wikipedia-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/88px-Wikipedia-logo-v2.svg.png 2x"
+          data-file-width="103" data-file-height="94" /></div>
+    </div>
+    <div style="margin-left: 60px;">Spanish <a href="/wiki/Wikipedia" title="Wikipedia">Wikipedia</a> has an article on:
+      <div style="margin-left: 10px;"><b class="Latn" lang="es"><a
+            href="https://en.wikipedia.org/wiki/es:gato_(desambiguaci%C3%B3n)" class="extiw"
+            title="w:es:gato (desambiguación)">gato (disambiguation)</a></b></div>
+    </div><span class="interProject"><a href="https://en.wikipedia.org/wiki/es:gato_(desambiguaci%C3%B3n)" class="extiw"
+        title="w:es:gato (desambiguación)">Wikipedia <sup>es</sup></a></span>
+  </div>
+  <div class="thumb tright">
+    <div class="thumbinner" style="width:225px;"><a href="/wiki/File:Niobe050905-Siamese_Cat.jpeg" class="image"><img
+          alt=""
+          src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/223px-Niobe050905-Siamese_Cat.jpeg"
+          decoding="async" width="223" height="300" class="thumbimage"
+          srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/335px-Niobe050905-Siamese_Cat.jpeg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Niobe050905-Siamese_Cat.jpeg/447px-Niobe050905-Siamese_Cat.jpeg 2x"
+          data-file-width="1392" data-file-height="1870" /></a>
+      <div class="thumbcaption">
+        <div class="magnify"><a href="/wiki/File:Niobe050905-Siamese_Cat.jpeg" class="internal" title="Enlarge"></a>
+        </div><b>gato</b>
+      </div>
+    </div>
+  </div>
+  <h3><span class="mw-headline" id="Pronunciation_4">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=39"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a href="/wiki/Appendix:Spanish_pronunciation"
+          title="Appendix:Spanish pronunciation">key</a>)</sup>:&#32;<span class="IPA">/ˈɡato/</span>, <span
+        class="IPA">[ˈɡa.t̪o]</span></li>
+    <li>
+      <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r50165410" />
+      <table class="audiotable"
+        style="vertical-align: middle; display:inline-block; list-style:none;line-height: 1em; border-collapse:collapse;">
+        <tbody>
+          <tr>
+            <td class="unicode audiolink" style="padding-right:5px; padding-left: 0;">Audio (Spain)</td>
+            <td class="audiofile"><audio id="mwe_player_1" controls="" preload="none" width="175" style="width:175px;"
+                data-durationhint="1" data-mwtitle="LL-Q1321_(spa)-Millars-gato.wav" data-mwprovider="wikimediacommons">
+                <source
+                  src="//upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/LL-Q1321_%28spa%29-Millars-gato.wav/LL-Q1321_%28spa%29-Millars-gato.wav.mp3"
+                  type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0"
+                  data-height="0" data-bandwidth="0" />
+                <source
+                  src="//upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/LL-Q1321_%28spa%29-Millars-gato.wav/LL-Q1321_%28spa%29-Millars-gato.wav.ogg"
+                  type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Ogg Vorbis" data-shorttitle="Ogg Vorbis"
+                  data-transcodekey="ogg" data-width="0" data-height="0" data-bandwidth="0" />
+                <source src="//upload.wikimedia.org/wikipedia/commons/c/c0/LL-Q1321_%28spa%29-Millars-gato.wav"
+                  type="audio/wav" data-title="Original WAV file (768 kbps)" data-shorttitle="WAV source" data-width="0"
+                  data-height="0" data-bandwidth="768000" /></audio></td>
+            <td class="audiometa" style="font-size: 80%;">(<a href="/wiki/File:LL-Q1321_(spa)-Millars-gato.wav"
+                title="File:LL-Q1321 (spa)-Millars-gato.wav">file</a>)</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>Rhymes: <a href="/w/index.php?title=Rhymes:Spanish/ato&amp;action=edit&amp;redlink=1" class="new"
+        title="Rhymes:Spanish/ato (page does not exist)"><span class="IPA">-ato</span></a></li>
+    <li>Hyphenation: <span class="Latn" lang="es">ga‧to</span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Etymology_1">Etymology 1</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=40"
+        title="Edit section: Etymology 1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late
+        Latin</a></span> <i class="Latn mention" lang="la"><a href="/wiki/cattus#Latin" title="cattus">cattus</a></i>
+    (compare <span class="etyl"><a href="https://en.wikipedia.org/wiki/Catalan_language" class="extiw"
+        title="w:Catalan language">Catalan</a></span> <i class="Latn mention" lang="ca"><a href="/wiki/gat#Catalan"
+        title="gat">gat</a></i>, <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language"
+        class="extiw" title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a
+        href="/wiki/chat#French" title="chat">chat</a></i>, <span class="etyl"><a
+        href="https://en.wikipedia.org/wiki/Italian_language" class="extiw"
+        title="w:Italian language">Italian</a></span> <i class="Latn mention" lang="it"><a href="/wiki/gatto#Italian"
+        title="gatto">gatto</a></i>, <span class="etyl"><a href="https://en.wikipedia.org/wiki/Portuguese_language"
+        class="extiw" title="w:Portuguese language">Portuguese</a></span> <i class="Latn mention" lang="pt"><a
+        href="/wiki/gato#Portuguese" title="gato">gato</a></i>). See <i class="Latn mention" lang="en"><a
+        href="/wiki/cat#English" title="cat">cat</a></i> for more.
+  </p>
+  <h4><span class="mw-headline" id="Noun_8">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=41"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <p><strong class="Latn headword" lang="es">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>plural</i> <b class="Latn form-of lang-es p-form-of" lang="es"><a
+        href="/wiki/gatos#Spanish" title="gatos">gatos</a></b>, <i>feminine</i> <b
+      class="Latn form-of lang-es f-form-of" lang="es"><a href="/wiki/gata#Spanish" title="gata">gata</a></b>,
+    <i>feminine plural</i> <b class="Latn form-of lang-es p-form-of origin-gata" lang="es"><a href="/wiki/gatas#Spanish"
+        title="gatas">gatas</a></b>)
+  </p>
+  <ol>
+    <li><a href="/wiki/cat" title="cat">cat</a> <span class="gloss-brac">(</span><span class="gloss-content">unspecified
+        gender</span><span class="gloss-brac">)</span>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonyms:</span> <span class="Latn" lang="es"><a
+                href="/wiki/felino#Spanish" title="felino">felino</a></span>, <span class="Latn" lang="es"><a
+                href="/wiki/f%C3%A9lido#Spanish" title="félido">félido</a></span></span></dd>
+      </dl>
+    </li>
+    <li><a href="/wiki/tomcat" title="tomcat">tomcat</a>, <a href="/wiki/gib" title="gib">gib</a> <span
+        class="gloss-brac">(</span><span class="gloss-content">male cat</span><span class="gloss-brac">)</span></li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="https://en.wikipedia.org/wiki/Mexico"
+          class="extiw" title="w:Mexico">Mexico</a></span><span class="ib-brac">)</span> <a href="/wiki/servant"
+        title="servant">servant</a>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonyms:</span> <span class="Latn" lang="es"><a
+                href="/wiki/achichincle#Spanish" title="achichincle">achichincle</a></span>, <span class="Latn"
+              lang="es"><a href="/wiki/servidor#Spanish" title="servidor">servidor</a></span>, <span class="Latn"
+              lang="es"><a href="/wiki/sirviente#Spanish" title="sirviente">sirviente</a></span>, <span class="Latn"
+              lang="es"><a href="/wiki/mozo#Spanish" title="mozo">mozo</a></span>, <span class="Latn" lang="es"><a
+                href="/wiki/criado#Spanish" title="criado">criado</a></span></span></dd>
+      </dl>
+    </li>
+    <li><a href="/wiki/C-clamp" title="C-clamp">C-clamp</a></li>
+    <li><a href="/wiki/jack" title="jack">jack</a> (mechanical device)</li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="https://en.wikipedia.org/wiki/Mexico"
+          class="extiw" title="w:Mexico">Mexico</a></span><span class="ib-brac">)</span> <a href="/wiki/tic-tac-toe"
+        title="tic-tac-toe">tic-tac-toe</a>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonym:</span> <span class="Latn" lang="es"><a
+                href="/w/index.php?title=tres_en_l%C3%ADnea&amp;action=edit&amp;redlink=1" class="new"
+                title="tres en línea (page does not exist)">tres en línea</a></span></span></dd>
+      </dl>
+    </li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#colloquial"
+          title="Appendix:Glossary">colloquial</a></span><span class="ib-brac">)</span> <a href="/wiki/Madrilenian"
+        title="Madrilenian">Madrilenian</a> <span class="gloss-brac">(</span><span class="gloss-content">a person from
+        Madrid</span><span class="gloss-brac">)</span>
+      <dl>
+        <dd><span class="nyms synonym"><span class="defdate">Synonym:</span> <span class="Latn" lang="es"><a
+                href="/wiki/madrile%C3%B1o#Spanish" title="madrileño">madrileño</a></span></span></dd>
+      </dl>
+    </li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="https://en.wikipedia.org/wiki/Costa_Rica"
+          class="extiw" title="w:Costa Rica">Costa Rica</a></span><span class="ib-brac">)</span> person with blue or
+      green eyes</li>
+  </ol>
+  <h3><span class="mw-headline" id="Etymology_2_2">Etymology 2</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=42"
+        title="Edit section: Etymology 2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/French_language" class="extiw"
+        title="w:French language">French</a></span> <i class="Latn mention" lang="fr"><a href="/wiki/g%C3%A2teau#French"
+        title="gâteau">gâteau</a></i>.
+  </p>
+  <h4><span class="mw-headline" id="Noun_9">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=43"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <p><strong class="Latn headword" lang="es">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>plural</i> <b class="Latn form-of lang-es p-form-of" lang="es"><a
+        href="/wiki/gatos#Spanish" title="gatos">gatos</a></b>)
+  </p>
+  <ol>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="https://en.wikipedia.org/wiki/Costa_Rica"
+          class="extiw" title="w:Costa Rica">Costa Rica</a></span><span class="ib-brac">)</span> rectangular cake made
+      of two layers joined by jam in the middle</li>
+  </ol>
+  <h3><span class="mw-headline" id="Etymology_3_2">Etymology 3</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=44"
+        title="Edit section: Etymology 3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From gatillar<a rel="nofollow" class="external autonumber"
+      href="https://www.lanacion.com.ar/sociedad/de-donde-viene-y-que-significa-el-insulto-gato-nid2004576">[1]</a><a
+      rel="nofollow" class="external autonumber"
+      href="https://www.cultura.gob.ar/un-dia-como-hoy-hace-58-anos-se-fundaba-la-academia-portena-del-lunfar-9923">[2]</a>
+  </p>
+  <h4><span class="mw-headline" id="Noun_10">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=45"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <p><strong class="Latn headword" lang="es">gato</strong>&#160;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span> (<i>plural</i> <b class="Latn form-of lang-es p-form-of" lang="es"><a
+        href="/wiki/gatos#Spanish" title="gatos">gatos</a></b>)
+  </p>
+  <ol>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#obsolete"
+          title="Appendix:Glossary">obsolete</a><span class="ib-comma">,</span>&#32;<a
+          href="/wiki/Appendix:Glossary#slang" title="Appendix:Glossary">slang</a><span class="ib-comma">,</span>&#32;<a
+          href="https://en.wikipedia.org/wiki/Argentina" class="extiw" title="w:Argentina">Argentina</a></span><span
+        class="ib-brac">)</span> <a href="/wiki/whoremonger" title="whoremonger">whoremonger</a></li>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#vulgar"
+          title="Appendix:Glossary">vulgar</a><span class="ib-comma">,</span>&#32;<a
+          href="/wiki/Appendix:Glossary#slang" title="Appendix:Glossary">slang</a><span class="ib-comma">,</span>&#32;<a
+          href="https://en.wikipedia.org/wiki/Argentina" class="extiw" title="w:Argentina">Argentina</a></span><span
+        class="ib-brac">)</span> a prostitute woman</li>
+  </ol>
+  <h5><span class="mw-headline" id="Hyponyms">Hyponyms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=46"
+        title="Edit section: Hyponyms">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+  <div class="list-switcher" data-toggle-category="derived terms">
+    <div class="derivedterms term-list ul-column-count" data-column-count="3" style="background-color: #F8F8FF;">
+      <ul>
+        <li><span class="Latn" lang="es"><a href="/wiki/abisinio#Spanish" title="abisinio">abisinio</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Abyssinian cat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/azul_ruso#Spanish" title="azul ruso">azul ruso</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=bosque_de_Noruega&amp;action=edit&amp;redlink=1"
+              class="new" title="bosque de Noruega (page does not exist)">bosque de Noruega</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Norwegian forest cat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/cartujo#Spanish" title="cartujo">cartujo</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Chartreux</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=devon_rex&amp;action=edit&amp;redlink=1"
+              class="new" title="devon rex (page does not exist)">devon rex</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Devon Rex</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_atigrado#Spanish" title="gato atigrado">gato
+              atigrado</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=gato_Bombay&amp;action=edit&amp;redlink=1"
+              class="new" title="gato Bombay (page does not exist)">gato Bombay</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Bombay cat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_colorado#Spanish" title="gato colorado">gato
+              colorado</a></span></li>
+        <li><span class="Latn" lang="es"><a
+              href="/w/index.php?title=gato_com%C3%BAn_europeo&amp;action=edit&amp;redlink=1" class="new"
+              title="gato común europeo (page does not exist)">gato común europeo</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">European shorthair</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_de_Borneo#Spanish" title="gato de Borneo">gato de
+              Borneo</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/Gato_de_Cheshire#Spanish" title="Gato de Cheshire">Gato de
+              Cheshire</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_del_desierto#Spanish" title="gato del desierto">gato del
+              desierto</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=gato_de_Van&amp;action=edit&amp;redlink=1"
+              class="new" title="gato de Van (page does not exist)">gato de Van</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Turkish van</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=gato_ex%C3%B3tico&amp;action=edit&amp;redlink=1"
+              class="new" title="gato exótico (page does not exist)">gato exótico</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Exotic Shorthair</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=gato_himalayo&amp;action=edit&amp;redlink=1"
+              class="new" title="gato himalayo (page does not exist)">gato himalayo</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Himalayan cat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=gato_himalayo&amp;action=edit&amp;redlink=1"
+              class="new" title="gato himalayo (page does not exist)">gato himalayo</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Himalayan cat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_mont%C3%A9s#Spanish" title="gato montés">gato
+              montés</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_persa#Spanish" title="gato persa">gato persa</a></span>
+        </li>
+        <li><span class="Latn" lang="es"><a href="/wiki/korat#Spanish" title="korat">korat</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">Korat</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/Manx#Spanish" title="Manx">Manx</a></span>, <span class="Latn"
+            lang="es"><a href="/w/index.php?title=gato_Manx&amp;action=edit&amp;redlink=1" class="new"
+              title="gato Manx (page does not exist)">gato Manx</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/w/index.php?title=rex_alem%C3%A1n&amp;action=edit&amp;redlink=1"
+              class="new" title="rex alemán (page does not exist)">rex alemán</a></span> <span
+            class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+            class="mention-gloss">German Rex</span><span class="mention-gloss-double-quote">”</span><span
+            class="mention-gloss-paren annotation-paren">)</span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/siam%C3%A9s#Spanish" title="siamés">siamés</a></span></li>
+      </ul>
+    </div>
+    <div class="list-switcher-element" data-showtext="&#160;show more ▼&#160;" data-hidetext="&#160;show less ▲&#160;"
+      style="display: none;">&#160;</div>
+  </div>
+  <h5><span class="mw-headline" id="Derived_terms_2">Derived terms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=47"
+        title="Edit section: Derived terms">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+  <div class="list-switcher" data-toggle-category="derived terms">
+    <div class="derivedterms term-list ul-column-count" data-column-count="3" style="background-color: #F8F8FF;">
+      <ul>
+        <li><span class="Latn" lang="es"><a href="/wiki/arena_para_gato#Spanish" title="arena para gato">arena para
+              gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/buscarle_tres_pies_al_gato#Spanish"
+              title="buscarle tres pies al gato">buscarle tres pies al gato</a></span></li>
+        <li><span class="Latn" lang="es"><a
+              href="/wiki/cuando_el_gato_no_est%C3%A1_los_ratones_est%C3%A1n_de_fiesta#Spanish"
+              title="cuando el gato no está los ratones están de fiesta">cuando el gato no está los ratones están de
+              fiesta</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/cuatro_gatos#Spanish" title="cuatro gatos">cuatro
+              gatos</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/dar_gato_por_liebre#Spanish" title="dar gato por liebre">dar
+              gato por liebre</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/de_noche_todos_los_gatos_son_pardos#Spanish"
+              title="de noche todos los gatos son pardos">de noche todos los gatos son pardos</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gatear#Spanish" title="gatear">gatear</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gatillo#Spanish" title="gatillo">gatillo</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gatito#Spanish" title="gatito">gatito</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_de_espinas#Spanish" title="gato de espinas">gato de
+              espinas</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_escaldado_del_agua_fr%C3%ADa_huye#Spanish"
+              title="gato escaldado del agua fría huye">gato escaldado del agua fría huye</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_solo#Spanish" title="gato solo">gato solo</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gato_tigre#Spanish" title="gato tigre">gato tigre</a></span>
+        </li>
+        <li><span class="Latn" lang="es"><a href="/wiki/gatuno#Spanish" title="gatuno">gatuno</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/haber_gato_encerrado#Spanish" title="haber gato encerrado">haber
+              gato encerrado</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/la_curiosidad_mat%C3%B3_al_gato#Spanish"
+              title="la curiosidad mató al gato">la curiosidad mató al gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/llevarse_como_el_perro_y_el_gato#Spanish"
+              title="llevarse como el perro y el gato">llevarse como el perro y el gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/llevarse_el_gato_al_agua#Spanish"
+              title="llevarse el gato al agua">llevarse el gato al agua</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/menta_de_gato#Spanish" title="menta de gato">menta de
+              gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/pelagatos#Spanish" title="pelagatos">pelagatos</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/pie_de_gato#Spanish" title="pie de gato">pie de gato</a></span>
+        </li>
+        <li><span class="Latn" lang="es"><a href="/wiki/ponerle_el_cascabel_al_gato#Spanish"
+              title="ponerle el cascabel al gato">ponerle el cascabel al gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/sacar_el_ascua_con_la_mano_del_gato#Spanish"
+              title="sacar el ascua con la mano del gato">sacar el ascua con la mano del gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/tabaraste_gato#Spanish" title="tabaraste gato">tabaraste
+              gato</a></span></li>
+        <li><span class="Latn" lang="es"><a href="/wiki/u%C3%B1a_de_gato#Spanish" title="uña de gato">uña de
+              gato</a></span></li>
+      </ul>
+    </div>
+    <div class="list-switcher-element" data-showtext="&#160;show more ▼&#160;" data-hidetext="&#160;show less ▲&#160;"
+      style="display: none;">&#160;</div>
+  </div>
+  <h5><span class="mw-headline" id="Related_terms_2">Related terms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=48"
+        title="Edit section: Related terms">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+  <ul>
+    <li><span class="Latn" lang="es"><a href="/wiki/gata#Spanish" title="gata">gata</a></span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Further_reading_3">Further reading</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=49"
+        title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li>“<a rel="nofollow" class="external text" href="https://dle.rae.es/gato">gato</a>”, in&#32;<cite><a
+          href="https://en.wikipedia.org/wiki/Diccionario_de_la_lengua_espa%C3%B1ola" class="extiw"
+          title="wikipedia:Diccionario de la lengua española">Diccionario de la lengua española</a>, Vigésima tercera
+        edición</cite>, Real Academia Española, 2014</li>
+  </ul>
+  <h3><span class="mw-headline" id="Anagrams">Anagrams</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=50"
+        title="Edit section: Anagrams">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><span class="Latn" lang="es"><a href="/wiki/gota#Spanish" title="gota">gota</a></span>, <span class="Latn"
+        lang="es"><a href="/wiki/toga#Spanish" title="toga">toga</a></span></li>
+  </ul>
+  <hr />
+  <h2><span class="mw-headline" id="Venetian">Venetian</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=51"
+        title="Edit section: Venetian">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <div class="thumb tright">
+    <div class="thumbinner" style="width:222px;"><a href="/wiki/File:Cat_poster_2.jpg" class="image"><img alt=""
+          src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cat_poster_2.jpg/220px-Cat_poster_2.jpg"
+          decoding="async" width="220" height="178" class="thumbimage"
+          srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cat_poster_2.jpg/330px-Cat_poster_2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cat_poster_2.jpg/440px-Cat_poster_2.jpg 2x"
+          data-file-width="5226" data-file-height="4222" /></a>
+      <div class="thumbcaption">
+        <div class="magnify"><a href="/wiki/File:Cat_poster_2.jpg" class="internal" title="Enlarge"></a></div>Dei
+        <b>gati</b>
+      </div>
+    </div>
+  </div>
+  <h3><span class="mw-headline" id="Alternative_forms_2">Alternative forms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=52"
+        title="Edit section: Alternative forms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><span class="Latn" lang="vec"><a href="/wiki/gat#Venetian" title="gat">gat</a></span> <span
+        class="ib-brac qualifier-brac">(</span><span class="ib-content qualifier-content">Dialectal</span><span
+        class="ib-brac qualifier-brac">)</span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Etymology_8">Etymology</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=53"
+        title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p>From <span class="etyl"><a href="https://en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late
+        Latin</a></span> <i class="Latn mention" lang="la"><a href="/wiki/cattus#Latin" title="cattus">cattus</a></i>
+    <span class="mention-gloss-paren annotation-paren">(</span><span class="mention-gloss-double-quote">“</span><span
+      class="mention-gloss">cat</span><span class="mention-gloss-double-quote">”</span><span
+      class="mention-gloss-paren annotation-paren">)</span>. See the etymology at <i class="Latn mention" lang="en"><a
+        href="/wiki/cat#English" title="cat">cat</a></i> for further details.
+  </p>
+  <h3><span class="mw-headline" id="Pronunciation_5">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=54"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a
+          href="https://en.wikipedia.org/wiki/Venetian_phonology" class="extiw"
+          title="wikipedia:Venetian phonology">key</a>)</sup>:&#32;<span class="IPA">/ˈɡa.to/</span></li>
+    <li>Hyphenation: <span class="Latn" lang="vec">gàto</span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Noun_11">Noun</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=55"
+        title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <p><strong class="Latn headword" lang="vec">gato</strong>&#32;<span class="gender"><abbr
+        title="masculine gender">m</abbr></span>&#32;(<i>plural</i> <b><span class="Latn form-of lang-vec p-form-of"
+        lang="vec"><a href="/wiki/gati#Venetian" title="gati">gati</a></span></b>)
+  </p>
+  <ol>
+    <li><span class="Latn" lang="en"><a href="/wiki/cat#English" title="cat">cat</a></span> <span
+        class="gloss-brac">(</span><span class="gloss-content"><i>Felis silvestris catus</i>, a domesticated feline
+        commonly kept as a house pet</span><span class="gloss-brac">)</span></li>
+  </ol>
+  <hr />
+  <h2><span class="mw-headline" id="Welsh">Welsh</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=56"
+        title="Edit section: Welsh">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+  <h3><span class="mw-headline" id="Pronunciation_6">Pronunciation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=57"
+        title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <ul>
+    <li><a href="/wiki/Wiktionary:International_Phonetic_Alphabet"
+        title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a href="/wiki/Appendix:Welsh_pronunciation"
+          title="Appendix:Welsh pronunciation">key</a>)</sup>:&#32;<span class="IPA">/ˈɡatɔ/</span></li>
+  </ul>
+  <h3><span class="mw-headline" id="Etymology_1_2">Etymology 1</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=58"
+        title="Edit section: Etymology 1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <h4><span class="mw-headline" id="Alternative_forms_3">Alternative forms</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=59"
+        title="Edit section: Alternative forms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <ul>
+    <li><span class="Latn" lang="cy"><a href="/w/index.php?title=gadawo&amp;action=edit&amp;redlink=1" class="new"
+          title="gadawo (page does not exist)">gadawo</a></span></li>
+  </ul>
+  <h4><span class="mw-headline" id="Verb">Verb</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=60"
+        title="Edit section: Verb">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <p><strong class="Latn headword" lang="cy">gato</strong>
+  </p>
+  <ol>
+    <li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#literary"
+          title="Appendix:Glossary">literary</a></span><span class="ib-brac">)</span> <span
+        class="form-of-definition use-with-mention"><a href="/wiki/Appendix:Glossary#third_person"
+          title="Appendix:Glossary">third-person</a> <a href="/wiki/Appendix:Glossary#singular_number"
+          title="Appendix:Glossary">singular</a> <a href="/wiki/Appendix:Glossary#subjunctive_mood"
+          title="Appendix:Glossary">subjunctive</a> of <span class="form-of-definition-link"><i class="Latn mention"
+            lang="cy"><a href="/wiki/gadael#Welsh" title="gadael">gadael</a></i></span></span></li>
+  </ol>
+  <h4><span class="mw-headline" id="Mutation">Mutation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=61"
+        title="Edit section: Mutation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <table class="inflection-table"
+    style="width:60%; border-style:solid; border-right-width:2px; border-bottom-width:2px; border-collapse:collapse; background-color:#F8F8F8; font-size:95%; text-align:center;"
+    border="1px solid #7f7f7f">
+
+    <tbody>
+      <tr>
+        <th colspan="4"><a href="/wiki/Appendix:Welsh_mutations" title="Appendix:Welsh mutations">Welsh mutation</a>
+        </th>
+      </tr>
+      <tr>
+        <th><a href="/wiki/radical" title="radical">radical</a></th>
+        <th><a href="/wiki/soft_mutation" title="soft mutation">soft</a></th>
+        <th><a href="/wiki/nasal_mutation" title="nasal mutation">nasal</a></th>
+        <th><a href="/wiki/aspirate_mutation" title="aspirate mutation">aspirate</a>
+        </th>
+      </tr>
+      <tr>
+        <td><span class="Latn" lang="cy"><strong class="selflink">gato</strong></span>
+        </td>
+        <td><span class="Latn form-of lang-cy soft-form-of origin-gato" lang="cy"><a href="/wiki/ato#Welsh"
+              title="ato">ato</a></span>
+        </td>
+        <td><span class="Latn form-of lang-cy nasal-form-of origin-gato" lang="cy"><a
+              href="/w/index.php?title=ngato&amp;action=edit&amp;redlink=1" class="new"
+              title="ngato (page does not exist)">ngato</a></span>
+        </td>
+        <td><i>unchanged</i>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"><small style="font-size:85%;"><i>Note:</i> Some of these forms may be hypothetical. Not every
+            possible mutated form of every word actually occurs.</small>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3><span class="mw-headline" id="Etymology_2_3">Etymology 2</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=62"
+        title="Edit section: Etymology 2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+  <h4><span class="mw-headline" id="Verb_2">Verb</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=63"
+        title="Edit section: Verb">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <p><strong class="Latn headword" lang="cy">gato</strong>
+  </p>
+  <ol>
+    <li><span class="form-of-definition use-with-mention">Soft mutation of <span class="form-of-definition-link"><i
+            class="Latn mention" lang="cy"><a href="/wiki/cato#Welsh" title="cato">cato</a></i></span></span>.</li>
+  </ol>
+  <h4><span class="mw-headline" id="Mutation_2">Mutation</span><span class="mw-editsection"><span
+        class="mw-editsection-bracket">[</span><a href="/w/index.php?title=gato&amp;action=edit&amp;section=64"
+        title="Edit section: Mutation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+  <table class="inflection-table"
+    style="width:60%; border-style:solid; border-right-width:2px; border-bottom-width:2px; border-collapse:collapse; background-color:#F8F8F8; font-size:95%; text-align:center;"
+    border="1px solid #7f7f7f">
+
+    <tbody>
+      <tr>
+        <th colspan="4"><a href="/wiki/Appendix:Welsh_mutations" title="Appendix:Welsh mutations">Welsh mutation</a>
+        </th>
+      </tr>
+      <tr>
+        <th><a href="/wiki/radical" title="radical">radical</a></th>
+        <th><a href="/wiki/soft_mutation" title="soft mutation">soft</a></th>
+        <th><a href="/wiki/nasal_mutation" title="nasal mutation">nasal</a></th>
+        <th><a href="/wiki/aspirate_mutation" title="aspirate mutation">aspirate</a>
+        </th>
+      </tr>
+      <tr>
+        <td><span class="Latn" lang="cy"><a href="/wiki/cato#Welsh" title="cato">cato</a></span>
+        </td>
+        <td><span class="Latn form-of lang-cy soft-form-of origin-cato" lang="cy"><strong
+              class="selflink">gato</strong></span>
+        </td>
+        <td><span class="Latn form-of lang-cy nasal-form-of origin-cato" lang="cy"><a
+              href="/w/index.php?title=nghato&amp;action=edit&amp;redlink=1" class="new"
+              title="nghato (page does not exist)">nghato</a></span>
+        </td>
+        <td><span class="Latn form-of lang-cy aspirate-form-of origin-cato" lang="cy"><a href="/wiki/chato#Welsh"
+              title="chato">chato</a></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"><small style="font-size:85%;"><i>Note:</i> Some of these forms may be hypothetical. Not every
+            possible mutated form of every word actually occurs.</small>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 
+NewPP limit report
+Parsed by mw2403
+Cached time: 20221020163834
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.797 seconds
+Real time usage: 1.198 seconds
+Preprocessor visited node count: 22200/1000000
+Post‐expand include size: 133392/2097152 bytes
+Template argument size: 28718/2097152 bytes
+Highest expansion depth: 19/100
+Expensive parser function count: 27/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1032/5000000 bytes
+Lua time usage: 0.457/10.000 seconds
+Lua memory usage: 22797035/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+  <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1080.067      1 -total
+ 26.92%  290.766     19 Template:check_deprecated_lang_param_usage
+ 26.64%  287.782     19 Template:deprecated_code
+ 18.12%  195.678     31 Template:l
+ 15.28%  165.010     37 Template:redlink_category
+ 15.13%  163.420      1 Template:col3
+  8.14%   87.936      3 Template:bor
+  5.61%   60.586      7 Template:inh
+  4.79%   51.741     12 Template:lb
+  4.75%   51.297      3 Template:inflection_of
+-->
+
+  <!-- Saved in parser cache with key enwiktionary:pcache:idhash:46582-0!canonical and timestamp 20221020163833 and revision id 69543117.
+ -->
+</div>
