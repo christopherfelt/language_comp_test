@@ -2,7 +2,11 @@ import axios from "axios"
 import {load} from "cheerio";
 import fs from "fs"
 
-axios.get('https://en.wiktionary.org/w/api.php?action=parse&format=json&uselang=user&page=gato').then(resp => {
+let testWord = "bota"
+let selectedLanguage = "Spanish"
+
+
+axios.get('https://en.wiktionary.org/w/api.php?action=parse&format=json&uselang=user&page='+testWord).then(resp => {
 
     let textData = resp.data.parse.text['*']
     
@@ -76,14 +80,14 @@ axios.get('https://en.wiktionary.org/w/api.php?action=parse&format=json&uselang=
 
         let etyID = langRef.etyRef[0]
         let etyHeader = ch(etyID);
-        languageObj.etymology = etyHeader.parent().next().text();
+        languageObj.etymology = etyHeader.parent().next().text().replace(/[\r\n]/gm, '');
 
         let proID = langRef.proRef
         let proHeader = ch(proID)
         let proList = []
         proHeader.parent().next().children().each(function(){
             let listItem = ch(this)
-            proList.push(listItem.find('.IPA').text())
+            proList.push(listItem.find('.IPA').text().replace(/[\r\n]/gm, ''))
         });
 
         languageObj.pronunciation = proList[0]
@@ -93,8 +97,11 @@ axios.get('https://en.wiktionary.org/w/api.php?action=parse&format=json&uselang=
 
     }
 
+    
+    // console.log(returnObj.languages[selectedLanguage])
     console.log(returnObj.languages)
 
+});
 
     // function getChildText(parent){
     //     let text = parent.text()
@@ -144,8 +151,3 @@ axios.get('https://en.wiktionary.org/w/api.php?action=parse&format=json&uselang=
     // console.log(languageHeader.parent().next().html());
 
     // loop through children and get the text
-
-
-
-});
-
